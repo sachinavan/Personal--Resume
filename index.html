@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sachin Kumar — BCA student, frontend developer and data visualization learner." />
+  <title>Sachin Kumar — Portfolio</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Fixed Scroll/Interactive Background Canvas -->
+  <canvas id="scroll-canvas"></canvas>
+
+  <!-- Ambient noise texture overlay -->
+  <div class="noise"></div>
+  
+  <!-- Interactive custom cursor elements -->
+  <div class="cursor"></div>
+  <div class="cursor-dot"></div>
+
+  <!-- Global Header Navigation -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#home">SACHIN KUMAR<span>.</span></a>
+      <nav class="links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+        <a href="#resume">Resume</a>
+        <a class="hire" href="#contact">Let's Talk</a>
+      </nav>
+      <button class="menu" aria-label="Open menu">☰</button>
+    </div>
+  </header>
+
+  <!-- Main Content Sections -->
+  <main>
+    <!-- Section 0: Hero -->
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow"><span class="dot"></span> Available for learning & freelance projects</div>
+          <h1>I BUILD<br><span class="outline">DIGITAL</span><br><span class="red">EXPERIENCES.</span></h1>
+          <p class="hero-copy">I'm Sachin Kumar — a BCA student exploring frontend development, Python, SQL and data visualization. I turn ideas into clean, useful and interactive digital experiences.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#projects">View Projects ↗</a>
+            <a class="btn btn-ghost" href="#contact">Contact Me</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><b>BCA</b><span>Student</span></div>
+            <div class="stat"><b>4+</b><span>Core Tech Areas</span></div>
+            <div class="stat"><b>∞</b><span>Ideas to Build</span></div>
+          </div>
+        </div>
+
+        <div class="visual">
+          <div class="orb"></div>
+          <div class="float f1">HTML / CSS / JS</div>
+          <div class="float f2">Power BI • SQL</div>
+          <div class="float f3">Python</div>
+          <div class="card">
+            <div style="position:absolute;left:25px;top:25px;font-size:10px;color:#aaa;letter-spacing:.15em">SACHIN / 2026</div>
+            <div class="portrait"><img src="img.jpeg" alt="Portrait of Sachin Kumar" width="340" height="340" transparency="70" class="avatar"/></div>
+            <div style="position:absolute;bottom:24px;left:25px;font-size:11px;color:#bbb">BUILD • LEARN • SHIP</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 1: About -->
+    <section class="about" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">01 / About</div>
+            <h2 class="section-title">CURIOUS BY<br>DEFAULT.</h2>
+          </div>
+          <p>A portfolio built around practical learning: coding projects, dashboards, interfaces and experiments that solve real problems.</p>
+        </div>
+        <div class="about-grid reveal">
+          <div class="about-text">I'm currently pursuing a <strong>BCA</strong> and building my skills across <strong>web development, programming and data analytics</strong>. I enjoy taking a concept, breaking it down, and turning it into something people can actually use.</div>
+          <div class="timeline">
+            <div class="timeline-item">
+              <small>01 — Education</small>
+              <h3>Bachelor of Computer Applications</h3>
+              <p>Building a strong foundation in software, databases, operating systems, networking and web technologies.</p>
+            </div>
+            <div class="timeline-item">
+              <small>02 — Current Focus</small>
+              <h3>Frontend + Data</h3>
+              <p>Practicing HTML, CSS, JavaScript, Python, SQL and Power BI through hands-on projects.</p>
+            </div>
+            <div class="timeline-item">
+              <small>03 — Direction</small>
+              <h3>Build a professional portfolio</h3>
+              <p>Creating projects that demonstrate both technical thinking and visual communication.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">02 / Toolkit</div>
+            <h2 class="section-title">WHAT I<br>WORK WITH.</h2>
+          </div>
+          <p>My current stack is intentionally practical: learn a technology, build something with it, then improve the result.</p>
+        </div>
+        <div class="skills reveal">
+          <article class="skill">
+            <span class="num">01</span>
+            <h3><a href="C:\Users\sachi\Desktop\FSD\Real World web\Recipe\recipe.html">Frontend</a> </h3>
+            <p>HTML, CSS, responsive layouts, UI interactions and JavaScript fundamentals.</p>
+          </article>
+          <article class="skill">
+            <span class="num">02</span>
+            <h3>Python</h3>
+            <p>Programming fundamentals, automation experiments and desktop/project prototypes.</p>
+          </article>
+          <article class="skill">
+            <span class="num">03</span>
+            <h3>SQL & DBMS</h3>
+            <p>Queries, relational thinking, data storage and database concepts.</p>
+          </article>
+          <article class="skill">
+            <span class="num">04</span>
+            <h3>Power BI</h3>
+            <p>Data modeling, DAX measures, dashboards, KPIs and business-focused analysis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Projects -->
+    <section class="projects" id="projects">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">03 / Selected Work</div>
+            <h2 class="section-title">THINGS I'VE<br>BEEN BUILDING.</h2>
+          </div>
+          <p>Replace these cards with your live GitHub projects, screenshots and case studies as your portfolio grows.</p>
+        </div>
+        <div class="project-grid reveal">
+          <article class="project">
+            <span class="tag">POWER BI</span>
+            <h3>Sales Intelligence Dashboard</h3>
+            <p>A business dashboard exploring sales, revenue, costs, discounts, running totals and KPI-based analysis.</p>
+            <a class="project-link" href="#contact">View Case Study ↗</a>
+          </article>
+          <article class="project">
+            <span class="tag">WEB</span>
+            <h3>Responsive Login UI</h3>
+            <p>A clean frontend interface built to practice forms, responsive styling, interaction and deployment workflows.</p>
+            <a class="project-link" href="#contact">View Project ↗</a>
+          </article>
+          <article class="project">
+            <span class="tag">PYTHON</span>
+            <h3>Expense Tracker</h3>
+            <p>A practical project for recording, organizing and reviewing personal expense data.</p>
+            <a class="project-link" href="Finance tracker.py">View Project ↗</a>
+          </article>
+          <article class="project">
+            <span class="tag">DATA</span>
+            <h3>Data Analysis Experiments</h3>
+            <p>Small projects combining Python, SQL and visualization to turn raw data into understandable insights.</p>
+            <a class="project-link" href="#contact">View Experiments ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Services -->
+    <section id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <div class="section-kicker">04 / What I Can Do</div>
+            <h2 class="section-title">FROM IDEA<br>TO INTERFACE.</h2>
+          </div>
+          <p>As I continue building experience, these are the areas where I can contribute to small projects and collaborations.</p>
+        </div>
+        <div class="services-grid reveal">
+          <article class="service">
+            <div class="service-icon">01</div>
+            <a href="C:\Users\sachi\Desktop\FSD\Real World web\Recipe\recipe.html"><h3>Frontend Websites</h3></a>
+            <p>Responsive landing pages and portfolio-style websites with clean layouts, interactions and mobile support.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon">02</div>
+            <h3>Dashboard Design</h3>
+            <p>Power BI dashboards that organize KPIs and business data into a clear visual story.</p>
+          </article>
+          <article class="service">
+            <div class="service-icon">03</div>
+            <h3>Data Projects</h3>
+            <p>Beginner-friendly Python and SQL projects focused on practical data handling and analysis.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 5: Contact -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <div class="contact-box reveal">
+          <div>
+            <div class="section-kicker">05 / Contact</div>
+            <h2>LET'S BUILD<br>SOMETHING.</h2>
+            <p>Have a website, dashboard or project idea? Add your real contact details below and use this section as your portfolio CTA.</p>
+          </div>
+          <a class="btn btn-primary" href="https://mail.google.com/mail/u/0/#inboxSachinavan@Gmail.com?     compose=DmwnWtVcJRdmfHrJLffcKnxSfdXQClCqNfXXdlLtlRbbgQjLxslcRBHjXGRjfkjzJhQNqbHMrcdg">Email Me ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- <! -- Section 6: Resume --> 
+    <section class="resume" id="resume">
+      <div class="container">
+        <div class="resume-box reveal">
+          <div>
+            <div class="section-kicker">06 / Resume</div>
+            <h2>Let's Explore<br>SOMETHING.</h2>
+            <p>Explore my resume to discover my technical skills, projects, learning journey, and passion for technology. See what I’m learning, what I can do, and how I’m preparing to turn my knowledge into real-world impact.</p>
+          </div>
+          <a class="btn btn-primary" href="SK.html"><h2>Resume ↗</h2></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <span>© 2026 Sachin Kumar</span>
+      <span>Designed & built with HTML • CSS • JS</span>
+    </div>
+  </footer>
+
+  <!-- Unified Interaction and Canvas Script -->
+  <script>
+    // Custom Cursor tracking and hover scaling
+    const cursor = document.querySelector('.cursor');
+    const dot = document.querySelector('.cursor-dot');
+    let mouseX = null;
+    let mouseY = null;
+
+    window.addEventListener('mousemove', e => {
+      cursor.style.left = e.clientX + 'px';
+      cursor.style.top = e.clientY + 'px';
+      dot.style.left = e.clientX + 'px';
+      dot.style.top = e.clientY + 'px';
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    window.addEventListener('mouseleave', () => {
+      mouseX = null;
+      mouseY = null;
+    });
+
+    document.querySelectorAll('a, .btn, .skill, .project, .service').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        cursor.style.width = '34px';
+        cursor.style.height = '34px';
+        cursor.style.background = 'rgba(255,255,255,.12)';
+      });
+      el.addEventListener('mouseleave', () => {
+        cursor.style.width = '18px';
+        cursor.style.height = '18px';
+        cursor.style.background = 'transparent';
+      });
+    });
+
+    // Intersection Observer for Reveal-on-scroll elements
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('show');
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // Subtle interactive parallax on the hero visual card
+    const visual = document.querySelector('.visual');
+    window.addEventListener('mousemove', e => {
+      if (window.innerWidth > 850) {
+        const x = (e.clientX / window.innerWidth - .5) * 10;
+        const y = (e.clientY / window.innerHeight - .5) * 8;
+        visual.style.transform = `translate(${x}px,${y}px)`;
+      }
+    });
+
+    // Canvas Scroll-Sequence / Particle Fallback Background System
+    const canvas = document.getElementById("scroll-canvas");
+    const context = canvas.getContext("2d");
+
+    const frameCount = 210;
+    const currentFrame = index => `./ezgif-frame-${index.toString().padStart(3, '0')}.jpg`;
+
+    const images = [];
+    let loadedCount = 0;
+    let loadedSuccessfullyCount = 0;
+    let targetFrameIndex = 1;
+    let currentFrameIndex = 1;
+    const ease = 0.08;
+    let useFallback = false;
+
+    // Detect if the frame sequence exists on disk by preloading frame 1
+    const firstImg = new Image();
+    firstImg.src = currentFrame(1);
+    
+    firstImg.onload = () => {
+      images[0] = firstImg;
+      loadedCount = 1;
+      loadedSuccessfullyCount = 1;
+      loadFullSequence();
+    };
+
+    firstImg.onerror = () => {
+      // Sequence not found, run fallback generative system
+      useFallback = true;
+      startFallbackAnimation();
+    };
+
+    function loadFullSequence() {
+      for (let i = 2; i <= frameCount; i++) {
+        const img = new Image();
+        img.onload = () => {
+          loadedCount++;
+          loadedSuccessfullyCount++;
+          if (loadedCount === frameCount) {
+            startAnimation();
+          }
+        };
+        img.onerror = () => {
+          loadedCount++;
+          if (loadedCount === frameCount) {
+            startAnimation();
+          }
+        };
+        img.src = currentFrame(i);
+        images.push(img);
+      }
+    }
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      const logicalWidth = window.innerWidth;
+      const logicalHeight = window.innerHeight;
+
+      canvas.width = logicalWidth * dpr;
+      canvas.height = logicalHeight * dpr;
+      context.scale(dpr, dpr);
+
+      if (!useFallback && loadedSuccessfullyCount > 0) {
+        drawFrame(Math.round(currentFrameIndex));
+      }
+    }
+
+    function drawFrame(index) {
+      const img = images[index - 1];
+      if (!img || !img.complete) return;
+
+      const logicalWidth = window.innerWidth;
+      const logicalHeight = window.innerHeight;
+
+      const canvasRatio = logicalWidth / logicalHeight;
+      const imgRatio = img.width / img.height;
+
+      let drawWidth, drawHeight, drawX, drawY;
+
+      // Cover scaling
+      if (canvasRatio > imgRatio) {
+        drawWidth = logicalWidth;
+        drawHeight = logicalWidth / imgRatio;
+      } else {
+        drawWidth = logicalHeight * imgRatio;
+        drawHeight = logicalHeight;
+      }
+
+      // Smooth zoom sequence scaling (zoom pushes from 1.0 to 1.15)
+      const currentFraction = (index - 1) / (frameCount - 1);
+      const scale = 1.0 + currentFraction * 0.15;
+
+      const scaledWidth = drawWidth * scale;
+      const scaledHeight = drawHeight * scale;
+
+      drawX = (logicalWidth - scaledWidth) / 2;
+      drawY = (logicalHeight - scaledHeight) / 2;
+
+      context.fillStyle = "#000000";
+      context.fillRect(0, 0, logicalWidth, logicalHeight);
+      context.drawImage(img, drawX, drawY, scaledWidth, scaledHeight);
+    }
+
+    function startAnimation() {
+      drawFrame(1);
+      
+      function update() {
+        if (useFallback) return;
+
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const fraction = maxScroll <= 0 ? 0 : scrollTop / maxScroll;
+        
+        targetFrameIndex = 1 + fraction * (frameCount - 1);
+        currentFrameIndex += (targetFrameIndex - currentFrameIndex) * ease;
+        
+        if (Math.abs(targetFrameIndex - currentFrameIndex) < 0.01) {
+          currentFrameIndex = targetFrameIndex;
+        }
+        
+        drawFrame(Math.round(currentFrameIndex));
+        requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    // Particle Object structure for fallback interactive animation
+    class Particle {
+      constructor(width, height) {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.baseSpeedX = (Math.random() - 0.5) * 0.5;
+        this.baseSpeedY = (Math.random() - 0.5) * 0.5;
+        this.vx = this.baseSpeedX;
+        this.vy = this.baseSpeedY;
+        this.radius = Math.random() * 2 + 1;
+        // 15% accented red/coral particles, 85% transparent white/grey particles
+        this.color = Math.random() > 0.85 ? 'rgba(255, 51, 72, 0.85)' : 'rgba(255, 255, 255, 0.4)';
+      }
+
+      update(width, height, mX, mY, scrollVel, scrollFrac) {
+        // Accelerate velocities with scroll turbulence/speed
+        this.vx = this.baseSpeedX + (Math.random() - 0.5) * scrollVel * 0.15;
+        this.vy = this.baseSpeedY + (Math.random() - 0.5) * scrollVel * 0.15;
+
+        // Apply visual air resistance drag back to base speed
+        this.vx += (this.baseSpeedX - this.vx) * 0.05;
+        this.vy += (this.baseSpeedY - this.vy) * 0.05;
+
+        this.x += this.vx;
+        this.y += this.vy;
+
+        // Wrap boundaries
+        const margin = 20;
+        if (this.x < -margin) this.x = width + margin;
+        if (this.x > width + margin) this.x = -margin;
+        if (this.y < -margin) this.y = height + margin;
+        if (this.y > height + margin) this.y = -margin;
+
+        // Interactive mouse magnetic pull
+        if (mX !== null && mY !== null) {
+          const scrollOffset = scrollFrac * height * 0.15;
+          const dx = mX - this.x;
+          const dy = mY - (this.y + scrollOffset);
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 150) {
+            const force = (150 - dist) / 150;
+            this.x += (dx / dist) * force * 0.6;
+            this.y += (dy / dist) * force * 0.6;
+          }
+        }
+      }
+
+      draw(ctx, scrollFrac, height) {
+        const scrollOffset = scrollFrac * height * 0.15;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y + scrollOffset, this.radius, 0, Math.PI * 2);
+        ctx.fillStyle = this.color;
+        ctx.fill();
+      }
+    }
+
+    let particles = [];
+    const particleCount = 90;
+
+    function initParticles(width, height) {
+      particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        particles.push(new Particle(width, height));
+      }
+    }
+
+    function startFallbackAnimation() {
+      const logicalWidth = window.innerWidth;
+      const logicalHeight = window.innerHeight;
+      initParticles(logicalWidth, logicalHeight);
+      
+      let lastScrollY = window.scrollY;
+      let scrollVelocity = 0;
+
+      function updateFallback() {
+        if (!useFallback) return;
+
+        const logicalWidth = window.innerWidth;
+        const logicalHeight = window.innerHeight;
+
+        // Base dark background
+        context.fillStyle = "#080707";
+        context.fillRect(0, 0, logicalWidth, logicalHeight);
+
+        // Fetch scroll fraction
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollFraction = maxScroll <= 0 ? 0 : scrollTop / maxScroll;
+
+        // Calculate scroll velocity
+        const currentScrollY = window.scrollY;
+        const diff = Math.abs(currentScrollY - lastScrollY);
+        scrollVelocity += (diff - scrollVelocity) * 0.15;
+        scrollVelocity *= 0.95; // decay
+        lastScrollY = currentScrollY;
+
+        // Radial gradient glow shifting slowly as user scrolls
+        const glowX = logicalWidth * (0.75 - scrollFraction * 0.1);
+        const glowY = logicalHeight * 0.5;
+        const glowRad = logicalWidth * 0.45;
+        const grad = context.createRadialGradient(glowX, glowY, 0, glowX, glowY, glowRad);
+        grad.addColorStop(0, 'rgba(215, 25, 45, 0.18)');
+        grad.addColorStop(0.5, 'rgba(215, 25, 45, 0.04)');
+        grad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        context.fillStyle = grad;
+        context.fillRect(0, 0, logicalWidth, logicalHeight);
+
+        const scrollOffset = scrollFraction * logicalHeight * 0.15;
+
+        // Update & Draw Particles
+        particles.forEach(p => {
+          p.update(logicalWidth, logicalHeight, mouseX, mouseY, scrollVelocity, scrollFraction);
+          p.draw(context, scrollFraction, logicalHeight);
+        });
+
+        // Draw node lines
+        context.lineWidth = 0.55;
+        for (let i = 0; i < particles.length; i++) {
+          const p1 = particles[i];
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dx = p1.x - p2.x;
+            const dy = (p1.y + scrollOffset) - (p2.y + scrollOffset);
+            const dist = Math.sqrt(dx * dx + dy * dy);
+
+            if (dist < 100) {
+              const alpha = (100 - dist) / 100 * 0.14;
+              if (p1.color.includes('255, 51, 72') || p2.color.includes('255, 51, 72')) {
+                context.strokeStyle = `rgba(255, 51, 72, ${alpha * 1.6})`;
+              } else {
+                context.strokeStyle = `rgba(255, 255, 255, ${alpha})`;
+              }
+              context.beginPath();
+              context.moveTo(p1.x, p1.y + scrollOffset);
+              context.lineTo(p2.x, p2.y + scrollOffset);
+              context.stroke();
+            }
+          }
+        }
+
+        // Draw lines from mouse to nearby particles
+        if (mouseX !== null && mouseY !== null) {
+          for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+            const dx = mouseX - p.x;
+            const dy = mouseY - (p.y + scrollOffset);
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 125) {
+              const alpha = (125 - dist) / 125 * 0.28;
+              context.strokeStyle = `rgba(255, 51, 72, ${alpha})`;
+              context.beginPath();
+              context.moveTo(p.x, p.y + scrollOffset);
+              context.lineTo(mouseX, mouseY);
+              context.stroke();
+            }
+          }
+        }
+
+        requestAnimationFrame(updateFallback);
+      }
+
+      window.addEventListener('resize', () => {
+        if (useFallback) {
+          initParticles(window.innerWidth, window.innerHeight);
+        }
+      });
+
+      requestAnimationFrame(updateFallback);
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+  </script>
+</body>
+</html>

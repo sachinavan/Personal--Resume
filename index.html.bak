@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Scroll Sequence</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="vr_ad_added.css">
+<link rel="stylesheet" href="vr_sponsored_ad.css">
+</head>
+<body>
+  <div class="scroll-container">
+    <canvas id="scroll-canvas"></canvas>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("scroll-canvas");
+    const context = canvas.getContext("2d");
+
+    const frameCount = 210;
+    const currentFrame = index => `./ezgif-frame-${index.toString().padStart(3, '0')}.jpg`;
+
+    const images = [];
+    let loadedCount = 0;
+    let targetFrameIndex = 1;
+    let currentFrameIndex = 1;
+    const ease = 0.08; // Smoothness factor (lower = smoother, higher = faster response)
+
+    // Preload all 210 images
+    for (let i = 1; i <= frameCount; i++) {
+      const img = new Image();
+      img.onload = () => {
+        loadedCount++;
+        drawLoading(loadedCount / frameCount);
+        if (loadedCount === frameCount) {
+          startAnimation();
+        }
+      };
+      img.onerror = () => {
+        loadedCount++;
+        if (loadedCount === frameCount) {
+          startAnimation();
+        }
+      };
+      img.src = currentFrame(i);
+      images.push(img);
+    }
+
+    function drawLoading(progress) {
+      const logicalWidth = window.innerWidth;
+      const logicalHeight = window.innerHeight;
+      
+      context.fillStyle = "#000000";
+      context.fillRect(0, 0, logicalWidth, logicalHeight);
+      
+      context.fillStyle = "#ffffff";
+      context.font = "20px system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
+      context.textAlign = "center";
+      context.textBaseline = "middle";
+      context.fillText(`Loading Sequence... ${Math.round(progress * 100)}%`, logicalWidth / 2, logicalHeight / 2);
+    }
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      const logicalWidth = window.innerWidth;
+      const logicalHeight = window.innerHeight;
+
+      // Set physical canvas dimensions based on DPI
+      canvas.width = logicalWidth * dpr;
+      canvas.height = logicalHeight * dpr;
+
+      // Scale context to draw using logical units
+      context.scale(dpr, dpr);
+
+      if (loadedCount < frameCount) {
+        drawLoading(loadedCount / frameCount);
+      } else {
+        drawFrame(Math.round(currentFrameIndex));
+      }
+    }
+
+    function drawFrame(index) {
+      const img = images[index - 1];
+      if (!img || !img.complete) return;
+
+      const logicalWidth = window.innerWidth;
+      const logicalHeight = window.innerHeight;
+
+      const canvasRatio = logicalWidth / logicalHeight;
+      const imgRatio = img.width / img.height;
+
+      let drawWidth, drawHeight, drawX, drawY;
+
+      // Cover-style resize calculation
+      if (canvasRatio > imgRatio) {
+        drawWidth = logicalWidth;
+        drawHeight = logicalWidth / imgRatio;
+      } else {
+        drawWidth = logicalHeight * imgRatio;
+        drawHeight = logicalHeight;
+      }
+
+      // Calculate scale factor (push-in effect)
+      // Zoom goes from 1.0 (at frame 1) to 1.15 (at frame 210)
+      const currentFraction = (index - 1) / (frameCount - 1);
+      const scale = 1.0 + currentFraction * 0.15;
+
+      // Apply the push-in (zoom) scale
+      const scaledWidth = drawWidth * scale;
+      const scaledHeight = drawHeight * scale;
+
+      // Center the scaled image perfectly in the viewport
+      drawX = (logicalWidth - scaledWidth) / 2;
+      drawY = (logicalHeight - scaledHeight) / 2;
+
+      // Fill canvas background with solid black first to avoid white/grey/transparent leaks
+      context.fillStyle = "#000000";
+      context.fillRect(0, 0, logicalWidth, logicalHeight);
+      
+      // Draw image frame
+      context.drawImage(img, drawX, drawY, scaledWidth, scaledHeight);
+    }
+
+    function startAnimation() {
+      drawFrame(1);
+      
+      function update() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+        const fraction = maxScroll <= 0 ? 0 : scrollTop / maxScroll;
+        
+        // As we scroll down (fraction goes from 0 to 1), the frame transitions from 1 (profile) to 210 (front)
+        targetFrameIndex = 1 + fraction * (frameCount - 1);
+        
+        // Linear interpolation (lerp) for smooth scroll
+        currentFrameIndex += (targetFrameIndex - currentFrameIndex) * ease;
+        
+        if (Math.abs(targetFrameIndex - currentFrameIndex) < 0.01) {
+          currentFrameIndex = targetFrameIndex;
+        }
+        
+        drawFrame(Math.round(currentFrameIndex));
+        requestAnimationFrame(update);
+      }
+      
+      requestAnimationFrame(update);
+    }
+
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+  </script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Places</title>
+    <style>
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            color: #8d110c;
+            font-size: 1.2rem;
+            font-style: italic;
+        }
+
+        .gallery-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-auto-rows: 250px;
+            gap: 15px;
+            grid-auto-flow: dense; /* Fills in gaps nicely */
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .span-2-cols {
+            grid-column: span 2;
+        }
+
+        .span-2-rows {
+            grid-row: span 2;
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+            display: flex;
+            align-items: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .overlay h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            transform: translateY(20px);
+            transition: transform 0.4s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .gallery-item:hover .overlay h3 {
+            transform: translateY(0);
+        }
+
+        /* --- Mobile Responsiveness --- */
+        @media (max-width: 768px) {
+            .span-2-cols {
+                grid-column: span 1; /* Reset columns on small screens */
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Wanderlust</h1>
+        <p>A collection of my favorite journeys around the India.</p>
+    </header>
+
+    <main class="gallery-container">
+        <div class="gallery-item span-2-cols span-2-rows">
+            <img src="sk_.png" alt="India">
+            <div class="overlay">
+                <h3>Massoria, India</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item span-2-rows">
+            <img src="AssiGhat Varanasi.png" alt="AssiGhta">
+            <div class="overlay">
+                <h3>Assighat India</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="picture (2).jpg" alt="Ambetkar Park">
+            <div class="overlay">
+                <h3>Ambetkar Park, India</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item span-2-cols">
+            <img src="picture (1).jpg" alt="Swiss Alps">
+            <div class="overlay">
+                <h3>MKTIR India</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="picture (5).jpg" alt="Amity University">
+            <div class="overlay">
+                <h3>Amity University India</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item span-2-rows">
+            <img src="picture (4).jpg" alt="Rainforest">
+            <div class="overlay">
+                <h3>LuLu Mall, India</h3>
+            </div>
+        </div>
+
+        <div class="gallery-item span-2-rows">
+            <img src="HCL.jpg" alt="Amsterdam">
+            <div class="overlay">
+                <h3>HCL, India</h3>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Details</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background:#f3f4f6;
+            padding:40px;
+        }
+
+        .personal-box{
+            max-width:800px;
+            margin:auto;
+            background:#ffffff;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 4px 15px rgba(0,0,0,0.1);
+            border-left:6px solid #2563eb;
+        }
+
+        .personal-box h2{
+            font-size:28px;
+            color:#111827;
+            margin-bottom:25px;
+        }
+
+        .detail{
+            display:flex;
+            margin-bottom:18px;
+            border-bottom:1px solid #e5e7eb;
+            padding-bottom:12px;
+        }
+
+        .detail strong{
+            width:220px;
+            color:#1f2937;
+            font-size:16px;
+        }
+
+        .detail span{
+            color:#4b5563;
+            font-size:16px;
+        }
+
+        @media(max-width:600px){
+            .detail{
+                flex-direction:column;
+            }
+
+            .detail strong{
+                margin-bottom:6px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="personal-box">
+
+        <h2>Personal Details</h2>
+
+        <div class="detail">
+            <strong>Full Name</strong>
+            <span>Sachin Kumar</span>
+        </div>
+
+        <div class="detail">
+            <strong>Date of Birth</strong>
+            <span>15 / 07 / 2007</span>
+        </div>
+
+        <div class="detail">
+            <strong>Gender</strong>
+            <span>Male</span>
+        </div>
+
+        <div class="detail">
+            <strong>Nationality</strong>
+            <span>Indian</span>
+        </div>
+
+        <div class="detail">
+            <strong>Languages Known</strong>
+            <span>Hindi, English</span>
+        </div>
+
+        <div class="detail">
+            <strong>Email Address</strong>
+            <span>Sachinavan@gmail.com</span>
+        </div>
+
+        <div class="detail">
+            <strong>Phone Number</strong>
+            <span>+91 8887686061</span>
+        </div>
+
+        <div class="detail">
+            <strong>Address</strong>
+            <span>Ghosi (Mau) PIN- 275304 Uttar Pradesh</span>
+        </div>
+
+        <div class="detail">
+            <strong>Marital Status</strong>
+            <span>Single</span>
+        </div>
+
+        <div class="detail">
+            <strong>Career Strengths</strong>
+            <span>
+                Quick learner, self-motivated, problem-solving mindset,
+                passionate about technology, and adaptable to new environments.
+            </span>
+        </div>
+
+    </div>
+
+</body>
+</html>
